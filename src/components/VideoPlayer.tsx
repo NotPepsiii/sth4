@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { X, ListVideo, ExternalLink } from "lucide-react";
+import { X, ListVideo, Shield } from "lucide-react";
 import { MediaItem, WatchHistoryItem } from "../types";
 import { smartFetch } from "../api";
 
@@ -109,15 +109,15 @@ export default function VideoPlayer({ item, onClose, onUpdateHistory }: VideoPla
 
           <div id="player-headers-actions" className="flex items-center gap-3">
             <a
-              id="btn-open-new-tab"
-              href={getEmbedUrl()}
+              id="btn-ad-blocker"
+              href="https://ublockorigin.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded bg-neutral-800 border border-neutral-700 text-neutral-200 hover:bg-neutral-700 hover:text-white transition-all text-xs font-semibold"
-              title="Open stream in a clean new tab"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded bg-amber-500 hover:bg-amber-600 text-black transition-all text-xs font-bold"
+              title="Highly Recommended: Install uBlock Origin to block video player ads"
             >
-              <ExternalLink className="w-3.5 h-3.5" />
-              <span className="hidden sm:inline">New Tab</span>
+              <Shield className="w-3.5 h-3.5" />
+              <span>Ad Blocker</span>
             </a>
 
             <button
